@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>База студентов</title>
+</head>
+<head>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<div class="container">
+  <h1>Учёт студентов</h1>
+
+  <div class="card">
+    <form id="studentForm">
+      <input type="hidden" id="studentId">
+      <div class="form-grid">
+        <input type="text" id="fullName" placeholder="ФИО студента" required>
+        <input type="text" id="group" placeholder="Группа (напр. ИСП 25-23)" required>
+        <input type="email" id="email" placeholder="Email" required>
+      </div>
+      <div class="actions">
+        <button type="submit" class="btn-primary" id="submitBtn">Добавить студента</button>
+        <button type="button" class="btn-secondary" id="cancelBtn" style="display: none;">Отмена</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="card">
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Поиск по имени, группе или email...">
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ФИО</th>
+          <th>Группа</th>
+          <th>Email</th>
+          <th>Действия</th>
+        </tr>
+      </thead>
+      <tbody id="studentList"></tbody>
+    </table>
+    <div id="emptyMessage" class="empty-state" style="display: none;">Студенты не найдены</div>
+  </div>
+</div>
+
+
+</body>
+</html>
